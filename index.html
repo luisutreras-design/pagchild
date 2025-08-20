@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Relajante</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Video de fondo -->
+    <video autoplay muted loop class="bg-video">
+        <source src="video/28236-368501609.mp4" type="video/mp4">
+    </video>
+
+    <!-- Overlay para oscurecer un poco y hacerlo más cómodo -->
+    <div class="overlay"></div>
+
+    <!-- Contenedor principal -->
+    <div class="content">
+        <h1 class="title">Bienvenido a un espacio de calma</h1>
+        <p class="subtitle">Tómate un momento para relajarte</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <div class="cards">
+            <div class="card">
+                <h2>Meditación</h2>
+                <p>Encuentra paz interior con ejercicios de respiración.</p>
+                <button onclick="meditacion()">▶ Escuchar</button>
+                <p id="display">00:00</p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Botón Configuración -->
+
+
+    <details class="settings-dropdown">
+        <summary>⚙️</summary> <!-- Icono de tuerca -->
+        <div class="dropdown-content">
+            <h3>Configurar contador</h3>
+            <label>Minutos:
+                <input type="number" id="minutesInput" min="1" value="5">
+            </label>
+            <br><br>
+            <button onclick="saveSettings()">Guardar</button>
+        </div>
+    </details>
+
+    <div id="counter" class="counter" style="display:none;">Tiempo: 00:00</div>
+
+
+
+
+
+
+
+
+
+    <!-- Audios ocultos -->
+    <audio id="meditaciona" src="audios/aa.mp3"></audio>
+    <audio id="naturaleza" src="audio/naturaleza.mp3"></audio>
+    <audio id="inspiracion" src="audio/inspiracion.mp3"></audio>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
